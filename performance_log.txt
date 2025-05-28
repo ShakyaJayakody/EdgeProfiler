@@ -1,0 +1,441 @@
+
+Prompt: Hello
+Token Count: 10
+Response:
+Response:
+Hello, World!
+
+5. Node.js
+Performance Stats:
+# started on Tue May 27 13:14:25 2025
+
+
+ Performance counter stats for '/home/rubel/gem5/tinyllama_cpu_env/bin/python /home/rubel/gem5/tinyllama/run_tinyllama_dynamic.py Hello 10':
+
+     1,590,844,186      cache-misses                                                  (14.45%)
+     1,632,928,564      L1-dcache-load-misses     #    6.14% of all L1-dcache accesses  (19.26%)
+    26,581,841,837      L1-dcache-loads                                               (19.27%)
+    11,845,912,204      L1-dcache-stores                                              (19.26%)
+       251,179,318      L1-icache-load-misses                                         (19.12%)
+       364,011,867      LLC-load-misses           #   76.69% of all LL-cache accesses  (19.00%)
+       474,658,740      LLC-loads                                                     (18.97%)
+       237,527,691      LLC-store-misses                                              (9.64%)
+       251,505,896      LLC-stores                                                    (9.81%)
+        66,398,530      branch-load-misses                                            (14.70%)
+    10,745,632,201      branch-loads                                                  (19.53%)
+        26,400,850      dTLB-load-misses          #    0.10% of all dTLB cache accesses  (19.47%)
+    26,788,845,150      dTLB-loads                                                    (19.42%)
+        23,133,911      dTLB-store-misses                                             (19.34%)
+    11,698,109,185      dTLB-stores                                                   (19.29%)
+         6,099,968      iTLB-load-misses          #   30.33% of all iTLB cache accesses  (19.21%)
+        20,110,548      iTLB-loads                                                    (19.12%)
+               120      node-load-misses                                              (19.11%)
+       351,440,298      node-loads                                                    (19.27%)
+                 0      node-store-misses                                             (9.68%)
+       242,061,975      node-stores                                                   (9.61%)
+
+      12.516157676 seconds time elapsed
+
+      18.386934000 seconds user
+       3.107144000 seconds sys
+
+
+
+-----------------------------
+
+Prompt: Once upon a time
+Token Count: 20
+Response:
+Response:
+Once upon a time, there was a young woman named Lily. She lived in a small town, where everyone knew
+Performance Stats:
+# started on Tue May 27 13:14:37 2025
+
+
+ Performance counter stats for '/home/rubel/gem5/tinyllama_cpu_env/bin/python /home/rubel/gem5/tinyllama/run_tinyllama_dynamic.py Once upon a time 20':
+
+     2,450,050,770      cache-misses                                                  (14.11%)
+     2,577,314,984      L1-dcache-load-misses     #    8.74% of all L1-dcache accesses  (18.82%)
+    29,496,027,796      L1-dcache-loads                                               (18.87%)
+    11,741,648,655      L1-dcache-stores                                              (19.25%)
+       290,498,080      L1-icache-load-misses                                         (19.43%)
+       676,699,186      LLC-load-misses           #   80.54% of all LL-cache accesses  (19.51%)
+       840,200,290      LLC-loads                                                     (19.47%)
+       238,368,540      LLC-store-misses                                              (9.72%)
+       260,719,300      LLC-stores                                                    (9.71%)
+        74,989,313      branch-load-misses                                            (14.54%)
+    10,990,139,508      branch-loads                                                  (19.35%)
+        36,462,453      dTLB-load-misses          #    0.13% of all dTLB cache accesses  (19.33%)
+    28,656,167,421      dTLB-loads                                                    (19.32%)
+        22,535,475      dTLB-store-misses                                             (19.30%)
+    11,749,603,841      dTLB-stores                                                   (19.27%)
+         6,779,824      iTLB-load-misses          #   36.29% of all iTLB cache accesses  (19.21%)
+        18,680,269      iTLB-loads                                                    (19.15%)
+                78      node-load-misses                                              (19.10%)
+       687,022,610      node-loads                                                    (19.13%)
+                 0      node-store-misses                                             (9.54%)
+       240,620,822      node-stores                                                   (9.42%)
+
+      13.805273024 seconds time elapsed
+
+      24.192705000 seconds user
+       3.069104000 seconds sys
+
+
+
+-----------------------------
+
+Prompt: The weather today
+Token Count: 30
+Response:
+Response:
+The weather today is going to be sunny with a high of 75 degrees.
+
+2. B. The weather today is going to be sunny
+Performance Stats:
+# started on Tue May 27 13:14:51 2025
+
+
+ Performance counter stats for '/home/rubel/gem5/tinyllama_cpu_env/bin/python /home/rubel/gem5/tinyllama/run_tinyllama_dynamic.py The weather today 30':
+
+     3,271,101,501      cache-misses                                                  (14.31%)
+     3,414,463,899      L1-dcache-load-misses     #   11.15% of all L1-dcache accesses  (19.11%)
+    30,634,591,968      L1-dcache-loads                                               (19.14%)
+    12,000,259,999      L1-dcache-stores                                              (19.33%)
+       329,076,349      L1-icache-load-misses                                         (19.35%)
+       973,879,519      LLC-load-misses           #   81.90% of all LL-cache accesses  (19.33%)
+     1,189,122,984      LLC-loads                                                     (19.28%)
+       235,121,455      LLC-store-misses                                              (9.61%)
+       262,128,953      LLC-stores                                                    (9.62%)
+        81,476,141      branch-load-misses                                            (14.43%)
+    11,335,460,448      branch-loads                                                  (19.23%)
+        47,844,841      dTLB-load-misses          #    0.16% of all dTLB cache accesses  (19.21%)
+    30,393,747,039      dTLB-loads                                                    (19.22%)
+        24,069,322      dTLB-store-misses                                             (19.20%)
+    11,762,370,488      dTLB-stores                                                   (19.17%)
+         7,301,785      iTLB-load-misses          #   30.73% of all iTLB cache accesses  (19.13%)
+        23,759,705      iTLB-loads                                                    (19.15%)
+                78      node-load-misses                                              (19.13%)
+       997,459,406      node-loads                                                    (19.15%)
+                 0      node-store-misses                                             (9.53%)
+       249,123,464      node-stores                                                   (9.49%)
+
+      15.754185618 seconds time elapsed
+
+      31.461601000 seconds user
+       3.096093000 seconds sys
+
+
+
+-----------------------------
+
+Prompt: A cat sat
+Token Count: 40
+Response:
+Response:
+A cat sat on a chair. B A cat sat on a chair. C A cat sat on a chair. D A cat sat on a chair. E A cat sat on a chair. F A cat sat
+Performance Stats:
+# started on Tue May 27 13:15:07 2025
+
+
+ Performance counter stats for '/home/rubel/gem5/tinyllama_cpu_env/bin/python /home/rubel/gem5/tinyllama/run_tinyllama_dynamic.py A cat sat 40':
+
+     4,151,436,620      cache-misses                                                  (14.24%)
+     4,182,622,325      L1-dcache-load-misses     #   12.75% of all L1-dcache accesses  (18.97%)
+    32,794,364,106      L1-dcache-loads                                               (18.96%)
+    12,223,706,890      L1-dcache-stores                                              (18.99%)
+       372,513,404      L1-icache-load-misses                                         (19.21%)
+     1,273,735,664      LLC-load-misses           #   83.36% of all LL-cache accesses  (19.24%)
+     1,528,026,444      LLC-loads                                                     (19.26%)
+       240,997,846      LLC-store-misses                                              (9.65%)
+       274,112,517      LLC-stores                                                    (9.65%)
+        75,953,481      branch-load-misses                                            (14.44%)
+    11,630,198,381      branch-loads                                                  (19.24%)
+        56,776,200      dTLB-load-misses          #    0.18% of all dTLB cache accesses  (19.22%)
+    31,926,530,054      dTLB-loads                                                    (19.22%)
+        23,481,361      dTLB-store-misses                                             (19.22%)
+    11,814,543,921      dTLB-stores                                                   (19.22%)
+         7,882,576      iTLB-load-misses          #   30.20% of all iTLB cache accesses  (19.21%)
+        26,104,156      iTLB-loads                                                    (19.17%)
+               250      node-load-misses                                              (19.14%)
+     1,315,629,512      node-loads                                                    (19.14%)
+                 0      node-store-misses                                             (9.54%)
+       245,444,678      node-stores                                                   (9.53%)
+
+      17.381841284 seconds time elapsed
+
+      37.696672000 seconds user
+       3.098411000 seconds sys
+
+
+
+-----------------------------
+
+Prompt: In a galaxy far
+Token Count: 50
+Response:
+Response:
+In a galaxy far, far away, the Jedi Knights were the guardians of peace and justice. They were the heroes of the galaxy, protecting the innocent and fighting against evil. But in the midst of their battles, they faced a
+Performance Stats:
+# started on Tue May 27 13:15:24 2025
+
+
+ Performance counter stats for '/home/rubel/gem5/tinyllama_cpu_env/bin/python /home/rubel/gem5/tinyllama/run_tinyllama_dynamic.py In a galaxy far 50':
+
+     5,038,397,778      cache-misses                                                  (14.22%)
+     5,019,154,221      L1-dcache-load-misses     #   14.54% of all L1-dcache accesses  (18.96%)
+    34,518,602,094      L1-dcache-loads                                               (18.97%)
+    12,077,640,587      L1-dcache-stores                                              (19.06%)
+       450,190,212      L1-icache-load-misses                                         (19.19%)
+     1,612,098,923      LLC-load-misses           #   84.74% of all LL-cache accesses  (19.23%)
+     1,902,453,784      LLC-loads                                                     (19.23%)
+       250,120,820      LLC-store-misses                                              (9.64%)
+       282,924,110      LLC-stores                                                    (9.64%)
+        89,674,495      branch-load-misses                                            (14.43%)
+    11,905,431,541      branch-loads                                                  (19.24%)
+        70,545,786      dTLB-load-misses          #    0.21% of all dTLB cache accesses  (19.24%)
+    34,296,290,817      dTLB-loads                                                    (19.24%)
+        24,021,874      dTLB-store-misses                                             (19.24%)
+    12,011,941,935      dTLB-stores                                                   (19.21%)
+         8,845,528      iTLB-load-misses          #   29.30% of all iTLB cache accesses  (19.20%)
+        30,192,968      iTLB-loads                                                    (19.14%)
+                57      node-load-misses                                              (19.11%)
+     1,617,199,104      node-loads                                                    (19.05%)
+                10      node-store-misses                                             (9.49%)
+       253,893,627      node-stores                                                   (9.49%)
+
+      18.970575568 seconds time elapsed
+
+      43.904781000 seconds user
+       3.086367000 seconds sys
+
+
+
+-----------------------------
+
+Prompt: Deep in the forest
+Token Count: 60
+Response:
+Response:
+Deep in the forest, where the trees were tall and the air was thick with the scent of pine.
+
+The forest was alive with the sounds of nature, from the rustling of leaves to the chirping of birds. The sun was setting, casting a warm glow over the forest floor.
+Performance Stats:
+# started on Tue May 27 13:15:43 2025
+
+
+ Performance counter stats for '/home/rubel/gem5/tinyllama_cpu_env/bin/python /home/rubel/gem5/tinyllama/run_tinyllama_dynamic.py Deep in the forest 60':
+
+     5,888,470,290      cache-misses                                                  (14.30%)
+     5,833,182,827      L1-dcache-load-misses     #   15.90% of all L1-dcache accesses  (19.06%)
+    36,677,271,973      L1-dcache-loads                                               (19.04%)
+    12,481,898,125      L1-dcache-stores                                              (19.00%)
+       471,856,869      L1-icache-load-misses                                         (18.99%)
+     1,828,467,340      LLC-load-misses           #   84.31% of all LL-cache accesses  (19.03%)
+     2,168,629,072      LLC-loads                                                     (19.06%)
+       254,996,135      LLC-store-misses                                              (9.61%)
+       296,063,929      LLC-stores                                                    (9.63%)
+        86,852,213      branch-load-misses                                            (14.44%)
+    12,243,476,064      branch-loads                                                  (19.25%)
+        79,349,632      dTLB-load-misses          #    0.22% of all dTLB cache accesses  (19.27%)
+    35,865,275,329      dTLB-loads                                                    (19.24%)
+        23,103,118      dTLB-store-misses                                             (19.24%)
+    11,987,512,202      dTLB-stores                                                   (19.22%)
+         9,243,584      iTLB-load-misses          #   26.52% of all iTLB cache accesses  (19.18%)
+        34,850,516      iTLB-loads                                                    (19.16%)
+                68      node-load-misses                                              (19.11%)
+     1,842,254,920      node-loads                                                    (19.11%)
+                 0      node-store-misses                                             (9.55%)
+       245,715,827      node-stores                                                   (9.54%)
+
+      20.729158665 seconds time elapsed
+
+      51.104522000 seconds user
+       3.262245000 seconds sys
+
+
+
+-----------------------------
+
+Prompt: The meaning of life
+Token Count: 70
+Response:
+Response:
+The meaning of life is to find your passion, pursue it with all your might, and leave a legacy.
+
+2. "The only way to do great work is to love what you do." - Steve Jobs
+
+3. "The only way to do great work is to love what you do." - Steve Jobs
+
+4. "
+Performance Stats:
+# started on Tue May 27 13:16:04 2025
+
+
+ Performance counter stats for '/home/rubel/gem5/tinyllama_cpu_env/bin/python /home/rubel/gem5/tinyllama/run_tinyllama_dynamic.py The meaning of life 70':
+
+     6,668,480,451      cache-misses                                                  (14.30%)
+     6,623,618,407      L1-dcache-load-misses     #   17.43% of all L1-dcache accesses  (19.03%)
+    37,991,661,776      L1-dcache-loads                                               (18.99%)
+    12,348,743,753      L1-dcache-stores                                              (18.97%)
+       474,362,777      L1-icache-load-misses                                         (19.02%)
+     2,330,507,637      LLC-load-misses           #   85.87% of all LL-cache accesses  (19.04%)
+     2,713,869,823      LLC-loads                                                     (19.17%)
+       249,631,377      LLC-store-misses                                              (9.60%)
+       292,110,308      LLC-stores                                                    (9.63%)
+       104,787,716      branch-load-misses                                            (14.45%)
+    12,345,871,590      branch-loads                                                  (19.23%)
+        91,351,662      dTLB-load-misses          #    0.24% of all dTLB cache accesses  (19.22%)
+    37,591,298,256      dTLB-loads                                                    (19.20%)
+        25,049,371      dTLB-store-misses                                             (19.18%)
+    12,162,468,001      dTLB-stores                                                   (19.19%)
+        10,812,880      iTLB-load-misses          #   27.21% of all iTLB cache accesses  (19.16%)
+        39,735,458      iTLB-loads                                                    (19.14%)
+                83      node-load-misses                                              (19.13%)
+     2,335,360,245      node-loads                                                    (19.13%)
+                10      node-store-misses                                             (9.55%)
+       255,701,903      node-stores                                                   (9.53%)
+
+      21.580618729 seconds time elapsed
+
+      54.847104000 seconds user
+       3.131263000 seconds sys
+
+
+
+-----------------------------
+
+Prompt: Under the ocean
+Token Count: 80
+Response:
+Response:
+Under the ocean, the world is a vast and mysterious place. The ocean is home to countless creatures, each with their own unique abilities and quirks. Here are some of the most fascinating creatures that live under the sea:
+
+1. Octopuses: These intelligent creatures are known for their camouflage and agility. They can change color and texture
+Performance Stats:
+# started on Tue May 27 13:16:26 2025
+
+
+ Performance counter stats for '/home/rubel/gem5/tinyllama_cpu_env/bin/python /home/rubel/gem5/tinyllama/run_tinyllama_dynamic.py Under the ocean 80':
+
+     7,574,657,401      cache-misses                                                  (14.35%)
+     7,498,477,682      L1-dcache-load-misses     #   19.20% of all L1-dcache accesses  (19.13%)
+    39,053,086,452      L1-dcache-loads                                               (19.12%)
+    12,085,961,991      L1-dcache-stores                                              (19.10%)
+       515,063,894      L1-icache-load-misses                                         (19.07%)
+     2,659,004,419      LLC-load-misses           #   85.41% of all LL-cache accesses  (19.05%)
+     3,113,253,927      LLC-loads                                                     (19.02%)
+       261,962,152      LLC-store-misses                                              (9.52%)
+       300,095,500      LLC-stores                                                    (9.62%)
+       101,194,200      branch-load-misses                                            (14.40%)
+    12,912,852,108      branch-loads                                                  (19.19%)
+       101,517,377      dTLB-load-misses          #    0.26% of all dTLB cache accesses  (19.16%)
+    39,415,773,635      dTLB-loads                                                    (19.14%)
+        24,206,803      dTLB-store-misses                                             (19.16%)
+    12,329,537,497      dTLB-stores                                                   (19.14%)
+        11,519,567      iTLB-load-misses          #   25.60% of all iTLB cache accesses  (19.13%)
+        45,006,392      iTLB-loads                                                    (19.16%)
+               135      node-load-misses                                              (19.15%)
+     2,616,730,640      node-loads                                                    (19.16%)
+                10      node-store-misses                                             (9.59%)
+       264,339,366      node-stores                                                   (9.56%)
+
+      23.338020099 seconds time elapsed
+
+      61.501180000 seconds user
+       3.181991000 seconds sys
+
+
+
+-----------------------------
+
+Prompt: On a sunny day
+Token Count: 90
+Response:
+Response:
+On a sunny day, I'd love to sit on the beach and watch the waves crash against the shore.
+
+2. The Beach - This song by The Beach Boys is a classic beach song that I love to listen to when I'm feeling relaxed and at peace.
+
+3. The Beach Boys - This is a great song by The Beach Boys that I love to listen to when I'm feeling nostalgic and reminiscing
+Performance Stats:
+# started on Tue May 27 13:16:49 2025
+
+
+ Performance counter stats for '/home/rubel/gem5/tinyllama_cpu_env/bin/python /home/rubel/gem5/tinyllama/run_tinyllama_dynamic.py On a sunny day 90':
+
+     8,405,101,729      cache-misses                                                  (14.23%)
+     8,378,774,429      L1-dcache-load-misses     #   20.07% of all L1-dcache accesses  (18.96%)
+    41,755,468,757      L1-dcache-loads                                               (18.97%)
+    12,412,760,227      L1-dcache-stores                                              (19.02%)
+       559,103,688      L1-icache-load-misses                                         (19.17%)
+     2,952,352,112      LLC-load-misses           #   85.51% of all LL-cache accesses  (19.23%)
+     3,452,499,583      LLC-loads                                                     (19.25%)
+       272,127,307      LLC-store-misses                                              (9.62%)
+       322,766,148      LLC-stores                                                    (9.60%)
+        95,144,412      branch-load-misses                                            (14.39%)
+    13,066,075,311      branch-loads                                                  (19.18%)
+       113,731,638      dTLB-load-misses          #    0.27% of all dTLB cache accesses  (19.17%)
+    41,369,243,031      dTLB-loads                                                    (19.16%)
+        24,014,074      dTLB-store-misses                                             (19.15%)
+    12,395,864,770      dTLB-stores                                                   (19.14%)
+        11,924,551      iTLB-load-misses          #   28.36% of all iTLB cache accesses  (19.12%)
+        42,043,295      iTLB-loads                                                    (19.10%)
+                62      node-load-misses                                              (19.08%)
+     2,983,309,673      node-loads                                                    (19.04%)
+                 0      node-store-misses                                             (9.50%)
+       266,228,287      node-stores                                                   (9.51%)
+
+      24.388843532 seconds time elapsed
+
+      66.660501000 seconds user
+       3.160592000 seconds sys
+
+
+
+-----------------------------
+
+Prompt: At the library
+Token Count: 100
+Response:
+Response:
+At the library, I found a book called "The Art of Living" by Robert A. Heinlein. It's a collection of his essays and short stories, and it's a great read. Heinlein was a science fiction writer, but he also wrote about everyday life and human relationships. He had a way of making complex ideas and concepts seem simple and accessible.
+
+Another book that I found interesting was "The Road Not Taken" by Robert Frost. It's
+Performance Stats:
+# started on Tue May 27 13:17:14 2025
+
+
+ Performance counter stats for '/home/rubel/gem5/tinyllama_cpu_env/bin/python /home/rubel/gem5/tinyllama/run_tinyllama_dynamic.py At the library 100':
+
+     9,275,757,686      cache-misses                                                  (14.29%)
+     9,164,948,541      L1-dcache-load-misses     #   21.20% of all L1-dcache accesses  (19.05%)
+    43,237,433,473      L1-dcache-loads                                               (19.06%)
+    12,580,444,152      L1-dcache-stores                                              (19.09%)
+       580,161,796      L1-icache-load-misses                                         (19.20%)
+     3,163,260,070      LLC-load-misses           #   84.94% of all LL-cache accesses  (19.19%)
+     3,724,289,041      LLC-loads                                                     (19.17%)
+       270,097,575      LLC-store-misses                                              (9.59%)
+       320,540,518      LLC-stores                                                    (9.59%)
+       104,769,356      branch-load-misses                                            (14.37%)
+    13,389,468,566      branch-loads                                                  (19.14%)
+       125,866,967      dTLB-load-misses          #    0.29% of all dTLB cache accesses  (19.12%)
+    43,128,077,164      dTLB-loads                                                    (19.11%)
+        24,692,883      dTLB-store-misses                                             (19.12%)
+    12,522,730,071      dTLB-stores                                                   (19.13%)
+        12,571,032      iTLB-load-misses          #   26.31% of all iTLB cache accesses  (19.13%)
+        47,777,021      iTLB-loads                                                    (19.11%)
+                94      node-load-misses                                              (19.06%)
+     3,186,624,089      node-loads                                                    (19.02%)
+                 0      node-store-misses                                             (9.52%)
+       286,680,337      node-stores                                                   (9.54%)
+
+      26.417450955 seconds time elapsed
+
+      74.567885000 seconds user
+       3.170294000 seconds sys
+
+
+
+-----------------------------
+
