@@ -42,18 +42,11 @@ EdgeProfiler is a lightweight, analytical cost‐model framework for estimating 
 ## Prerequisites
 
 - Python 3.7+  
-- [pandas](https://pandas.pydata.org/) (for tabular data handling)  
-- [matplotlib](https://matplotlib.org/) (for plotting)  
 
-> **Optional**:  
-> - If you want an interactive DataFrame display in Jupyter or your IDE, install [ace_tools](https://github.com/openai/ace_tools) (used in examples for DataFrame visualization).
-
-You can install required packages via pip:
+If you’re running Python 3.6 or earlier, install the required package via pip:
 
 ```bash
-pip install pandas matplotlib
-# Optional for Jupyter/interactive display:
-pip install ace_tools
+pip install dataclasses
 ```
 ## Installation
 
