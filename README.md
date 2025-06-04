@@ -55,6 +55,7 @@ No special packaging is required—EdgeProfiler is a self‐contained Python mod
 ```bash
 git clone https://github.com/ShakyaJayakody/EdgeProfiler.git
 cd EdgeProfiler
+python EdgeProfiler.py
 ```
 ## Citation
 
