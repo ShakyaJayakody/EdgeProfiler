@@ -63,6 +63,6 @@ No special packaging is required—EdgeProfiler is a self‐contained Python mod
 git clone https://github.com/ShakyaJayakody/EdgeProfiler.git
 cd EdgeProfiler
 ```
-
+## Citation
 
 
