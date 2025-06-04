@@ -9,18 +9,7 @@ EdgeProfiler is a lightweight, analytical cost‐model framework for estimating 
 1. [Features](#features)  
 2. [Prerequisites](#prerequisites)  
 3. [Installation](#installation)  
-4. [Usage](#usage)  
-   - [1. Define Configurations](#1-define-configurations)  
-   - [2. Run EdgeProfiler](#2-run-edgeprofiler)  
-   - [3. Sample Output](#3-sample-output)  
-   - [4. Plotting Results](#4-plotting-results)  
-5. [Configuration Details](#configuration-details)  
-   - [ModelConfig](#modelconfig)  
-   - [HardwareConfig](#hardwareconfig)  
-   - [PrecisionConfig](#precisionconfig)  
-6. [How It Works](#how-it-works)  
-7. [Extending EdgeProfiler](#extending-edgeprofiler)  
-8. [License](#license)  
+4. [citation](#citation)  
 
 ---
 
@@ -65,3 +54,15 @@ You can install required packages via pip:
 pip install pandas matplotlib
 # Optional for Jupyter/interactive display:
 pip install ace_tools
+
+## Installation
+
+No special packaging is required—EdgeProfiler is a self‐contained Python module. Simply clone this repository (or copy the source file) into your project:
+
+```bash
+git clone https://github.com/ShakyaJayakody/EdgeProfiler.git
+cd EdgeProfiler
+
+
+
+
