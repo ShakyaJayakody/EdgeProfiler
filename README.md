@@ -54,7 +54,7 @@ You can install required packages via pip:
 pip install pandas matplotlib
 # Optional for Jupyter/interactive display:
 pip install ace_tools
-
+```
 ## Installation
 
 No special packaging is required—EdgeProfiler is a self‐contained Python module. Simply clone this repository (or copy the source file) into your project:
@@ -62,7 +62,7 @@ No special packaging is required—EdgeProfiler is a self‐contained Python mod
 ```bash
 git clone https://github.com/ShakyaJayakody/EdgeProfiler.git
 cd EdgeProfiler
-
+```
 
 
 
