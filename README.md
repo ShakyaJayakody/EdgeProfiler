@@ -1,0 +1,67 @@
+# EdgeProfiler
+
+EdgeProfiler is a lightweight, analytical cost‐model framework for estimating per‐token inference performance (latency and energy) of transformer‐style language models on edge devices. It calculates closed‐form estimates for compute, memory, storage, host‐to‐device, and network latencies—without ever downloading real weight files or launching any kernels. Using only model and hardware configuration parameters, EdgeProfiler generates a “roofline‐style” breakdown of bottlenecks so you can rapidly compare different models, precisions, and hardware targets.
+
+---
+
+## Table of Contents
+
+1. [Features](#features)  
+2. [Prerequisites](#prerequisites)  
+3. [Installation](#installation)  
+4. [Usage](#usage)  
+   - [1. Define Configurations](#1-define-configurations)  
+   - [2. Run EdgeProfiler](#2-run-edgeprofiler)  
+   - [3. Sample Output](#3-sample-output)  
+   - [4. Plotting Results](#4-plotting-results)  
+5. [Configuration Details](#configuration-details)  
+   - [ModelConfig](#modelconfig)  
+   - [HardwareConfig](#hardwareconfig)  
+   - [PrecisionConfig](#precisionconfig)  
+6. [How It Works](#how-it-works)  
+7. [Extending EdgeProfiler](#extending-edgeprofiler)  
+8. [License](#license)  
+
+---
+
+## Features
+
+- **Closed‐Form Cost Model**  
+  - Computes parameter count, FLOPs per token, and memory footprint from first principles.  
+  - Estimates compute‐bound and memory‐bound latencies, plus I/O, host‐to‐device, and network overheads.
+
+- **Precision‐Aware**  
+  - Supports FP32, FP16, and INT8.  
+  - Adjusts both weight footprint and arithmetic intensity accordingly.
+
+- **Hardware Configurable**  
+  - Works with any device once you specify peak FLOPs, memory bandwidth, storage bandwidth, PCIe/NVLink bandwidth, and network bandwidth.  
+  - Models utilization factors (compute, memory, storage, H2D, network).
+
+- **Rapid Sweeps**  
+  - Profile dozens of (model, precision, hardware) combinations in microseconds each—no real weight downloads or GPU kernels required.
+
+- **Roofline Insights**  
+  - Reports arithmetic intensity (FLOPs per byte) to identify compute‐ vs memory‐bound regimes.  
+  - Provides energy estimates per token (Joules) based on simple energy‐per‐FLOP and energy‐per‐byte coefficients.
+
+- **Easy Plotting**  
+  - Built‐in example scripts demonstrate how to visualize end‐to‐end latency vs precision across devices.
+
+---
+
+## Prerequisites
+
+- Python 3.7+  
+- [pandas](https://pandas.pydata.org/) (for tabular data handling)  
+- [matplotlib](https://matplotlib.org/) (for plotting)  
+
+> **Optional**:  
+> - If you want an interactive DataFrame display in Jupyter or your IDE, install [ace_tools](https://github.com/openai/ace_tools) (used in examples for DataFrame visualization).
+
+You can install required packages via pip:
+
+```bash
+pip install pandas matplotlib
+# Optional for Jupyter/interactive display:
+pip install ace_tools
