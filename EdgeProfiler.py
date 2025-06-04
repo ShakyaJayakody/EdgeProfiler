@@ -39,9 +39,13 @@ class EdgeProfile:
         self.prec = prec
 
     def parameter_count(self) -> int:
+        # Include weights for projections and FFN and embeddings
         L, H, I = self.model.num_layers, self.model.hidden_size, self.model.intermediate_size
+        # Q,K,V,O: 4 projections HxH per layer
         proj = L * 4 * H * H
+        # FFN: HxI + I x H per layer
         ffn  = L * (H * I + I * H)
+        # embeddings + output head
         embed = 2 * self.model.vocab_size * H
         return proj + ffn + embed
 
@@ -55,9 +59,12 @@ class EdgeProfile:
         return attn_proj + attn_kv + ffn + ln + softmax
 
     def memory_footprint(self) -> float:
+        # Weights + activations + KV cache
         params = self.parameter_count()
         weight_bytes = params * self.prec.dtype_size
+         # Activations: hidden states for full sequence
         act_bytes    = self.model.seq_len * self.model.hidden_size * self.prec.dtype_size
+        # KV cache: stored keys & values per layer
         kv_bytes     = self.model.num_layers * self.model.seq_len * self.model.hidden_size * 2 * self.prec.dtype_size
         return weight_bytes + act_bytes + kv_bytes
 
@@ -95,7 +102,7 @@ class EdgeProfile:
         return weight_bytes / (self.hw.host_to_device_bw * self.hw.h2d_util)
 
     def network_transfer_time(self) -> float:
-        # assume one full shard exchange
+        
         shard_bytes = self.model.seq_len * self.model.hidden_size * self.prec.dtype_size
         return shard_bytes / (self.hw.network_bandwidth * self.hw.net_util)
 
@@ -134,25 +141,30 @@ class EdgeProfile:
         }
 
 if __name__ == '__main__':
+    # Precisions
     precisions = [
         PrecisionConfig('FP32', 4),
         PrecisionConfig('FP16', 2),
         PrecisionConfig('INT8', 1),
     ]
 
+    # Models
     models = [
         ModelConfig('TinyLlama-1B',    24,2048,8192, num_heads=32, seq_len=1024),
         ModelConfig('Gemma3-1B',       24,2048,8192, num_heads=32, seq_len=1024),
         ModelConfig('Llama3.2-1B',     24,2048,8192, num_heads=32, seq_len=1024),
         ModelConfig('DeepSeek-r1-1.5B',26,2304,9216, num_heads=36, seq_len=1024),
+        # ModelConfig('2B', 28, 2560, 10240, num_heads=40, seq_len=1024),
+        # ModelConfig('2.5B', 30, 2816,11264, num_heads=44, seq_len=1024),
+        # ModelConfig('3B', 32, 3072,12288, num_heads=48, seq_len=1024),
     ]
-
+    # Hardware platforms
     hardware_list = [
         HardwareConfig('Raspberry Pi 4',   50e9, 19e9, 5e8, 12e9, 1e8),
         HardwareConfig('Raspberry Pi 5',   64e9, 34e9, 5e8, 16e9, 1e8),
         HardwareConfig('Jetson Nano Super',0.5e12,25.6e9, 2e9, 30e9, 5e8),
     ]
-
+    # Header
     header = (
         f"{'Device':>17} | {'Model':>15} | {'Prec':>5} | {'Params(M)':>9} |"
         f" {'FLOPs/tok(G)':>12} | {'Mem(MB)':>8} | {'Comp(ms)':>8} | {'Mem(ms)':>8} |"
