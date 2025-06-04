@@ -34,9 +34,6 @@ EdgeProfiler is a lightweight, analytical cost‐model framework for estimating 
   - Reports arithmetic intensity (FLOPs per byte) to identify compute‐ vs memory‐bound regimes.  
   - Provides energy estimates per token (Joules) based on simple energy‐per‐FLOP and energy‐per‐byte coefficients.
 
-- **Easy Plotting**  
-  - Built‐in example scripts demonstrate how to visualize end‐to‐end latency vs precision across devices.
-
 ---
 
 ## Prerequisites
