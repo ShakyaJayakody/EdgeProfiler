@@ -56,14 +56,11 @@ python EdgeProfiler.py
 ```
 ## Citation
 ```bash
-@misc{pinnock2025edgeprofilerfastprofilingframework,
-      title={EdgeProfiler: A Fast Profiling Framework for Lightweight LLMs on Edge Using Analytical Model}, 
-      author={Alyssa Pinnock and Shakya Jayakody and Kawsher A Roxy and Md Rubel Ahmed},
-      year={2025},
-      eprint={2506.09061},
-      archivePrefix={arXiv},
-      primaryClass={cs.DC},
-      url={https://arxiv.org/abs/2506.09061}, 
+@article{pinnock2025edgeprofiler,
+  title={EdgeProfiler: A Fast Profiling Framework for Lightweight LLMs on Edge Using Analytical Model},
+  author={Pinnock, Alyssa and Jayakody, Shakya and Roxy, Kawsher A and Ahmed, Md Rubel},
+  journal={arXiv preprint arXiv:2506.09061},
+  year={2025}
 }
 ```
 
